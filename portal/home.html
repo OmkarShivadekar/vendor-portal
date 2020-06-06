@@ -8,11 +8,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 
-    <title>Home</title>
+    <style type="text/css">
+          body {
+                padding-top: 60px;
+              }
+          
+          @media (max-width: 979px) {
+            body {
+                padding-top: 0px;
+                }
+              }
+    </style>
+
+    <title>Product Details</title>
   </head>
   <body>
-    
+        
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">App name</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +33,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" data-toggle="modal" href="#addProduct">Add Product</a>
+          <li class="nav-item  active">
+            <a class="nav-link" href="home.html">Product Details</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Product Details</a>
+            <a class="nav-link" href="addProduct.html">Add Product</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Orders</a>
@@ -32,10 +45,74 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="nav-link" href="#">Logout</a></li>
+           <li><a class="nav-link" href="login.html">Logout</a></li>
         </ul>
        </div>
     </nav> 
+
+
+    <div class="container py-5">
+      
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+          <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Vendor Name</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th>Cost</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>100</td>
+                    <td>Ventilator</td>
+                    <td>Gaurav Surgicals</td>
+                    <td>7845123622</td>
+                    <td>Somwar Peth</td>
+                    <td>$320,800</td>
+                    <td>Available</td>
+                    <td>06/07/2020</td>
+                    <td>Update || Delete</td>
+                </tr>
+                
+                <tr>
+                    <td>101</td>
+                    <td>N95 Mask</td>
+                    <td>Omkar Meds</td>
+                    <td>9545123622</td>
+                    <td>Hinjewadi</td>
+                    <td>$320</td>
+                    <td>Available</td>
+                    <td>06/07/2020</td>
+                    <td>Update || Delete</td>
+                </tr>
+
+                <tr>
+                    <td>102</td>
+                    <td>PPE Kit</td>
+                    <td>Health Meds Store</td>
+                    <td>8745123622</td>
+                    <td>Wakad</td>
+                    <td>$800</td>
+                    <td>Not Available</td>
+                    <td>06/07/2020</td>
+                    <td>Update || Delete</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    
 
 
 
@@ -70,5 +147,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    
+    <script type="text/javascript">
+      
+      $(document).ready(function() {
+        $('#example').DataTable();
+      });
+
+    </script>
   </body>
 </html>
