@@ -55,7 +55,8 @@ $(document).ready(function() {
       }
 
       function updateOp(){
-
+        closeOp();
+        showSnackbar();
       }
 
       function cancelOp(){
@@ -95,4 +96,15 @@ $(document).ready(function() {
         $("#yes").prop('disabled', true);
         $("#no").prop('disabled', true);
         $("#address").prop('disabled', true);
+      }
+
+      function showSnackbar(){
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar");
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
       }
