@@ -1,0 +1,30 @@
+ body {
+  padding-top: 60px;
+}
+
+@media (max-width: 979px) {
+body {
+  padding-top: 0px;
+  }
+}
+
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+
+.custom-control{
+  margin-bottom: 0px;
+  margin-top: 6.5px;
+  margin-left: -23px
+
+}
+
+#preview{
+  height: 200px;
+  width: 200px;
+}
+
+.disabled {
+  pointer-events: none;
+}
